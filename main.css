@@ -1,0 +1,28 @@
+body {
+    background-color: #e3f9e2;
+    color: #488b44;
+    font-family: Arial;
+    margin: 0px;
+    line-height: 1.5; /* межстрочный интервал */
+}
+
+header {
+    background-color: #488b44;
+    color: #e3f9e2;
+    padding: 10px;
+    font-size: 14pt;
+}
+
+footer {
+    background-color: #488b44;
+    color: #e3f9e2;
+    padding: 10px;
+    font-size: 14pt;
+    font-style: italic;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: #488b44;
+}
