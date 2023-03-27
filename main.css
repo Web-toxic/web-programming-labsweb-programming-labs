@@ -26,3 +26,19 @@ a {
     text-decoration: none;
     color: #488b44;
 }
+
+a:visited {
+    color: rgb(71, 97, 71);
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active {
+    color: white;
+    background-color: red;
+}
