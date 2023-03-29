@@ -7,14 +7,14 @@ body {
 }
 
 header {
-    background-color: #488b44;
+    background-image: linear-gradient( to right, #f95451, #ffa749, #fff263, #86ff61, #92f8ff, #6fa4ff, #c384ff);
     color: #e3f9e2;
     padding: 10px;
     font-size: 14pt;
 }
 
 footer {
-    background-color: #488b44;
+    background-image: linear-gradient( to right, #f95451, #ffa749, #fff263, #86ff61, #92f8ff, #6fa4ff, #c384ff);
     color: #e3f9e2;
     padding: 10px;
     font-size: 14pt;
