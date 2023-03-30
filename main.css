@@ -11,6 +11,7 @@ header {
     color: #e3f9e2;
     padding: 10px;
     font-size: 14pt;
+    transition: 1s;
 }
 
 footer {
@@ -20,6 +21,7 @@ footer {
     font-size: 14pt;
     font-style: italic;
     text-align: right;
+    transition: 1s;
 }
 
 a {
@@ -46,3 +48,26 @@ a:active {
     color: white;
     background-color: red;
 }
+
+header:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+header:active {
+    color: rgb(0, 0, 0);
+    font-size: 16pt;
+    transition: 0.3s;
+}
+
+footer:hover {
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
+
+footer:active {
+    color: rgb(0, 0, 0);
+    font-size: 16pt;
+    transition: 0.3s;
+}
+
