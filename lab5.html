@@ -58,6 +58,23 @@
             output.style.textAlign = 'center';
             output.style.borderRadius = '10px';
         }
+
+        function showResult() {
+            let inputA = document.getElementById('Apples');
+            let inputB = document.getElementById('Pears');
+            let inputC = document.getElementById('Oranges');
+            let inputD = document.getElementById('Kiwi');
+
+            let a = parseInt(inputA.value); /*чтение_данных_из_поля_ввода.получение_значения*/
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+
+            let output = (a*100) + (b*80) + (c*90) + (d*200);
+            let showResultText = document.getElementById('showRes');
+            showResultText.innerHTML = `Общая стоимость: ${output} p`;
+        }
+        
     </script>
     <style>
         .message {
@@ -74,11 +91,38 @@
             background-color: rgb(221, 192, 255);
         }
 
+        .shopping_cart {
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid; /* граница сплошная */
+            border-color: #B74738;;
+            border-radius: 7px; /* скругление уголков */
+            margin: 20px 10px 10px 0px;
+            padding: 0px 15px 15px 15px;
+            color: #B74738;
+            background-color: #FFF3DB;
+        }
+
+        .click {
+            cursor: pointer;
+            border: 1px solid; /* граница сплошная */
+            border-color: #FFF3DB;
+            border-radius: 7px; /* скругление уголков */
+            padding: 7px; /* внутренние отступы */
+            margin-top: 10px;
+            width: 120px; /* ширина */
+            height: 25px; /* высота */
+            text-align: center;
+            color: #FFF3DB;
+            background-color: #B74738;
+        }
+
         #output {
             border: 1px solid;
             width: 300px;
             height: 40px;
         }
+
     </style>
 </head>
 
@@ -105,6 +149,19 @@
         </div>
 
         <div id="output"></div>
+
+        <div class="shopping_cart">
+            <h1>Корзина товаров</h1>
+
+            <label>Яблоки (100р/шт): <br><input type="number" value="0" id="Apples"></label><br>
+            <label>Груши (80р/шт): <br><input type="number" value="0" id="Pears"></label><br>
+            <label>Апельсины (90р/шт): <br><input type="number" value="0" id="Oranges"></label><br>
+            <label>Киви (200р/шт): <br><input type="number" value="0" id="Kiwi"></label><br>
+            
+            <input class="click" type="button" value="Рассчитать" onclick="showResult()">
+
+            <div id="showRes">Общая стоимость: 0p</div>
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
