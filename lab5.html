@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Топорнина Полина Игоревна. Лабораторная 5</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
+    </script>
+    <style>
+        .message {
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid; /* граница сплошная */
+            border-color: blue;
+            border-radius: 7px; /* скругление уголков */
+            padding: 7px; /* внутренние отступы */
+            width: 250px; /* ширина */
+            height: 25px; /* высота */
+            text-align: center;
+            color: rgb(37, 0, 97);
+            background-color: rgb(221, 192, 255);
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +37,8 @@
     </header>
     
     <main>
-        
+        <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать, кто автор страницы</div>
     </main>
 
     <footer>
