@@ -75,6 +75,11 @@
             showResultText.innerHTML = `Общая стоимость: ${output} p`;
         }
         
+        function Boom(id) {
+            let circle = document.getElementById(id);
+            circle.style.opacity = '0';
+        }
+
     </script>
     <style>
         .message {
@@ -117,12 +122,26 @@
             background-color: #B74738;
         }
 
+        .balloon {
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid; /* граница сплошная */
+            border-radius: 100%; /* скругление уголков */
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            padding: 5px;
+            color: rgb(58, 57, 57);
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+        }
+
         #output {
             border: 1px solid;
             width: 300px;
             height: 40px;
         }
-
     </style>
 </head>
 
@@ -162,6 +181,17 @@
 
             <div id="showRes">Общая стоимость: 0p</div>
         </div>
+        <br>
+        <div class="balloon" style="background-color: rgb(255, 118, 191)" id="b1" onclick="Boom('b1')">1</div>
+        <div class="balloon" style="background-color: rgb(255, 248, 182)" id="b2" onclick="Boom('b2')">2</div>
+        <div class="balloon" style="background-color:rgb(170, 249, 253)" id="b3" onclick="Boom('b3')">3</div>
+        <div class="balloon" style="background-color: rgb(150, 255, 173);" id="b4" onclick="Boom('b4')">4</div>
+        <div class="balloon" style="background-color: rgb(255, 176, 160);" id="b5" onclick="Boom('b5')">5</div>
+        <div class="balloon" style="background-color: rgb(209, 209, 209);" id="b6" onclick="Boom('b6')">6</div>
+        <div class="balloon" style="background-color: rgb(255, 134, 154);" id="b7" onclick="Boom('b7')">7</div>
+        <div class="balloon" style="background-color: rgb(68, 255, 214);" id="b8" onclick="Boom('b8')">8</div>
+        <div class="balloon" style="background-color: rgb(255, 106, 106);" id="b9" onclick="Boom('b9')">9</div>
+        <div class="balloon" style="background-color: rgb(144, 169, 223);" id="b10" onclick="Boom('b10')">10</div>
     </main>
 
     <footer onclick="showAuthor()">
