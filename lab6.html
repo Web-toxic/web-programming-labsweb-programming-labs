@@ -16,6 +16,17 @@
             width: 500px;
             text-align: center;
         }
+
+        .help {
+            border: 1px solid; /* граница сплошная */
+            border-color: rgb(152, 89, 199);
+            border-radius: 20px; /* скругление уголков */
+            padding: 10px; /* внутренние отступы */
+            margin: 30px auto;
+            width: 650px;
+            text-align: left;
+            background-color: rgb(238, 219, 255);
+        }
     </style>
     <script>
         let number;
@@ -65,6 +76,18 @@
             let message = document.getElementById('result');
             message.innerHTML = null;
         }
+
+        function showHelp() {
+            let openHelp = document.getElementsByClassName('help');
+            openHelp[0].style.display = 'none';
+            openHelp[1].style.display = 'block';
+        }
+
+        function closeHelp() {
+            let openHelp = document.getElementsByClassName('help');
+            openHelp[1].style.display = 'none';
+            openHelp[0].style.display = 'block';
+        }
     </script>
 </head>
 <body>
@@ -101,6 +124,25 @@
                 <button onclick="again()">Сыграть ещё раз</button>
             </div>
         </div>
+
+        <div class="help">
+            <button onclick="showHelp()">
+                Показать правила игры
+            </button>
+        </div>
+
+        <div class="help" style="display: none; color: black;">
+            <button onclick="closeHelp()">
+                Скрыть правила игры
+            </button><br>
+            <ol type="A">
+            <li>Нажмите на кнопку "сыграть в игру"</li>
+            <li>Выпрямите спину</li>
+            <li>Обернитесь, за Вами кто-то стоит...</li>
+            <li>Ладно, вводите число от 1 до 100 (но если Вы бунтарь, то можно и 101)</li>
+            </ol>
+        </div>
+
     </main>
 
     <footer onclick="showAuthor()">
