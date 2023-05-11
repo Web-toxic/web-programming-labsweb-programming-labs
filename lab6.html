@@ -35,6 +35,19 @@
             width: 250px;
             text-align: center;
         }
+
+        .movemakvin {
+            cursor: pointer;
+            width: 300px;
+            height: 60px;
+            border: 4px red solid;
+            border-radius: 20px;
+            text-align: center;
+            background-color: firebrick;
+            color: white;
+            padding: 10px;
+        }
+
     </style>
     <script>
         let number;
@@ -124,6 +137,21 @@
                 document.getElementById('color-name').innerHTML = 'жёлтый';
             }
         }
+
+        let positionLeft = true;
+        function movement() {
+            let makvin = document.getElementById('block');
+            if (positionLeft == true) {
+                makvin.style.transition = '2s';
+                makvin.style.transform = 'translateX(900px) rotate(0turn)';
+                positionLeft = false;
+            }
+            else {
+                makvin.style.transition = '2s';
+                makvin.style.transform = 'translateX(0px) rotate(4turn)';
+                positionLeft = true;
+            }
+        }
     </script>
 </head>
 <body>
@@ -182,8 +210,11 @@
         <div class="color" ondblclick="changeColor(this)" style="cursor: pointer; color: black;">
             Цвет: <span id="color-name">прозрачный</span><br>
             Сделайте двойной щелчок, чтобы сменить.
-        </div>
+        </div><br>
 
+        <div class="movemakvin" id="block" onclick="movement()">
+        Только попробуй тыкнуть... Я тебе тыкну!
+        </div>
     </main>
 
     <footer onclick="showAuthor()">
