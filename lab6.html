@@ -27,6 +27,14 @@
             text-align: left;
             background-color: rgb(238, 219, 255);
         }
+
+        .color {
+            border: 1px orangered solid;
+            padding: 10px;
+            margin: 30px auto;
+            width: 250px;
+            text-align: center;
+        }
     </style>
     <script>
         let number;
@@ -88,6 +96,34 @@
             openHelp[1].style.display = 'none';
             openHelp[0].style.display = 'block';
         }
+
+        function changeColor(div) {
+            if (div.style.backgroundColor == 'yellow') {
+                div.style.backgroundColor = 'red';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'красный';
+            }
+            else if (div.style.backgroundColor == 'red') {
+                div.style.backgroundColor = 'black';
+                div.style.color = 'aqua';
+                document.getElementById('color-name').innerHTML = 'чёрный';
+            }
+            else if (div.style.backgroundColor == 'black') {
+                div.style.backgroundColor = 'brown';
+                div.style.color = 'white';
+                document.getElementById('color-name').innerHTML = 'коричневый';
+            }
+            else if (div.style.backgroundColor == 'brown') {
+                div.style.backgroundColor = 'white';
+                div.style.color = 'orange';
+                document.getElementById('color-name').innerHTML = 'белый';
+            }
+            else {
+                div.style.backgroundColor = 'yellow';
+                div.style.color = 'black';
+                document.getElementById('color-name').innerHTML = 'жёлтый';
+            }
+        }
     </script>
 </head>
 <body>
@@ -141,6 +177,11 @@
             <li>Обернитесь, за Вами кто-то стоит...</li>
             <li>Ладно, вводите число от 1 до 100 (но если Вы бунтарь, то можно и 101)</li>
             </ol>
+        </div>
+
+        <div class="color" ondblclick="changeColor(this)" style="cursor: pointer; color: black;">
+            Цвет: <span id="color-name">прозрачный</span><br>
+            Сделайте двойной щелчок, чтобы сменить.
         </div>
 
     </main>
