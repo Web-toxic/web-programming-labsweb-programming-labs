@@ -48,6 +48,20 @@
             padding: 10px;
         }
 
+        #Boo {
+            cursor: pointer;
+            border: 2px white solid;
+            width: 100px;
+            height: 110px;
+            background-color: rgb(0, 57, 114);
+            font-size: small;
+            color: azure;
+            text-align: center;
+            padding: 10px;
+            padding-bottom: 0px;
+            transition: 0.5s;
+        }
+
     </style>
     <script>
         let number;
@@ -152,6 +166,18 @@
                 positionLeft = true;
             }
         }
+
+        function bigger() {
+            let Boo = document.getElementById('Boo');
+            let widthBoo = parseInt(Boo.style.width);
+            if (widthBoo < 1000) {
+                widthBoo += 50;
+            }
+            else {
+                widthBoo = 100;
+            }
+            Boo.style.width = widthBoo + 'px';
+        }
     </script>
 </head>
 <body>
@@ -214,7 +240,13 @@
 
         <div class="movemakvin" id="block" onclick="movement()">
         Только попробуй тыкнуть... Я тебе тыкну!
-        </div>
+        </div><br>
+
+        <div id="Boo" onclick="bigger()">
+        Тыкни на меня, чтобы я уБОлЬшИЛсЯ
+        </div><br>
+
+
     </main>
 
     <footer onclick="showAuthor()">
