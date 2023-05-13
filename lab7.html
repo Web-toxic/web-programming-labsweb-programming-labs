@@ -11,7 +11,18 @@
     </style>
 
     <script>
-        
+        function addBlocks() {
+            let blocks = document.getElementById('blocks');
+            for (let i = 0; i < 10; i++) {
+                let block = document.createElement('div');
+                block.innerHTML = 'Блок №' + (i+1) + ': ' + (2 * i**2);
+
+                blocks.appendChild(block);
+            }
+
+
+
+        }
     </script>
 </head>
 <body>
@@ -20,7 +31,8 @@
     </header>
 
     <main>
-
+        <button onclick="addBlocks()">Создать блоки</button>
+        <div id="blocks"></div>
     </main>
 
     <footer onclick="showAuthor()">
