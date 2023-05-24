@@ -7,7 +7,10 @@
     <title>Топорнина Полина Игоревна. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
     <style>
-
+        .blocks-opacity {
+            width: 40;
+            border: 2px yellow solid;
+        }
     </style>
 
     <script>
@@ -40,6 +43,18 @@
             let average = sum / exchange.length;
             document.getElementById('detail').innerHTML = 'Среднее значение: ' + average;
         }
+
+        function addTransparentBlocks() {
+            let blocks = document.getElementById('addTransparent-blocks');
+            for (let i = 0; i < 10; i++) {
+                let block = document.createElement('div');
+                block.style.opacity = (i * 10) + '%';
+                block.style.width = '100px';
+                block.style.height = '100px';
+                block.style.backgroundColor = 'crimson';
+                blocks.appendChild(block);
+            }
+        }
     </script>
 </head>
 <body>
@@ -54,6 +69,10 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
+        <div id="addTransparent-blocks"></div>
+        <!-- 8 задание - умножение на 23 -->
     </main>
 
     <footer onclick="showAuthor()">
