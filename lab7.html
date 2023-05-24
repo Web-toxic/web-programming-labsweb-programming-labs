@@ -7,9 +7,13 @@
     <title>Топорнина Полина Игоревна. Лабораторная 7</title>
     <link rel="stylesheet" href="main.css">
     <style>
-        .blocks-opacity {
-            width: 40;
-            border: 2px yellow solid;
+        .numblock {
+            padding: 12px;
+            background-color: #f2b5fe;
+            color: black;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            width: 120px;
         }
     </style>
 
@@ -18,6 +22,7 @@
             let blocks = document.getElementById('blocks');
             for (let i = 0; i < 10; i++) {
                 let block = document.createElement('div');
+                block.classList.add('numblock');
                 block.innerHTML = 'Блок №' + (i+1) + ': ' + (2 * i**2);
 
                 blocks.appendChild(block);
@@ -55,6 +60,36 @@
                 blocks.appendChild(block);
             }
         }
+
+        function Circles() {
+            let switcher = 0;
+            let circleInput = document.getElementById('circleInput');
+            let redButton = document.getElementById('redButton');
+            let container = document.getElementById('circleContainer');
+            let circleCount = parseInt(circleInput.value);
+            for (let i = 0; i < circleCount; i++) {
+                let circle = document.createElement('div');
+                circle.style.color = 'black';
+                if (switcher == 0) {
+                    circle.style.backgroundColor = 'orange';
+                    switcher = 1;
+                }
+                else {
+                    circle.style.backgroundColor = 'yellow';
+                    switcher = 0;
+                }
+                circle.style.paddingTop = '29px';
+                circle.style.paddingBottom = '29px';
+                circle.style.paddingLeft = '36px';
+                circle.style.paddingRight = '36px';
+                circle.style.display = 'inline-block';
+                circle.style.borderRadius = '100%'
+                circle.innerText = circleCount - i;
+                circle.style.marginRight = '12px';
+                container.appendChild(circle);
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -72,7 +107,11 @@
 
         <button onclick="addTransparentBlocks()">Создать полупрозрачные блоки</button>
         <div id="addTransparent-blocks"></div>
-        <!-- 8 задание - умножение на 23 -->
+        <!-- 8 и 9 задания - умножение на 23 -->
+        <input type="number" id="circleInput" value="5" placeholder="Введите число кругов">
+        <button id="redButton" onclick="Circles()">Оранжевое/Жёлтое</button>
+        <div id="circleContainer"></div>
+
     </main>
 
     <footer onclick="showAuthor()">
