@@ -90,6 +90,23 @@
             }
         }
 
+        function TableNumber() {
+            let table = document.createElement('table');
+            let container = document.getElementById('mul')
+            for (let i = 13; i <= 33; i++) {
+                let row = document.createElement('tr');
+                let cellNum = document.createElement('td');
+                cellNum.innerText = (`${i} * 33 = `);
+                row.appendChild(cellNum); // вставка элемента в конец
+                let cellResult = document.createElement('td');
+                let mulResult = i * 33;
+                cellResult.innerText = mulResult;
+                row.appendChild(cellResult);
+                table.appendChild(row);
+                
+            }
+            container.appendChild(table);
+        }
     </script>
 </head>
 <body>
@@ -111,6 +128,10 @@
         <input type="number" id="circleInput" value="5" placeholder="Введите число кругов">
         <button id="redButton" onclick="Circles()">Оранжевое/Жёлтое</button>
         <div id="circleContainer"></div>
+
+        <button onclick="TableNumber()">Таблица умножения на 33</button>
+        <div id="mul"></div>
+
 
     </main>
 
