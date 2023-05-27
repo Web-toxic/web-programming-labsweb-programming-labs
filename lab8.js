@@ -30,3 +30,10 @@ function Del() {
     screens[0].style.display = 'none';
     document.getElementsByClassName('d')[0].value="";
 }
+
+function showTime() {
+    let today = new Date();
+    let currentTime = today.toLocaleString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(showTime, 1000);
