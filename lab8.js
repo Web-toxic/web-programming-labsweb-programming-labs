@@ -15,3 +15,18 @@ function showDate() {
     out3.innerHTML = 'Дата и время для китайской локали: ' + today3.toLocaleString('zh-HK');
     out4.innerHTML = 'Дата и время для монгольской локали: ' + today4.toLocaleString('mn-MN');
 }
+
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    document.getElementById('days-count').innerHTML = 'Количество дней с даты рождения: '+ daysCount;
+}
+
+function Del() {
+    let screens = document.getElementsByClassName('div');
+    screens[0].style.display = 'none';
+    document.getElementsByClassName('d')[0].value="";
+}
